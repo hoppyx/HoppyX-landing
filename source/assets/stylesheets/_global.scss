@@ -8,10 +8,14 @@ body {
 }
 
 .splash {
-  align-items: center;
-  height: 100%;
   @include row;
+  text-align: center;
   padding: 0.5em;
+  padding-top: 0;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: 0;
 
   .container {
     display: block;
@@ -22,11 +26,14 @@ body {
   }
   img {
     display: block;
-    width: 90%;
-    max-width: 17em;
+    width: 100%;
+    max-width: 44em;
     margin: auto;
     height: auto;
-    margin-bottom: 3em;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: 2.5em;
   }
   h2 {
     font-size: 1em;
@@ -39,20 +46,23 @@ body {
     font-size: 1.1em;
     line-height: 1.2;
   }
-  @include media(20em) {
+  @include media(em(530)) {
     padding: 1.5em;
-    h2 {
-      font-size: 1.3em;
+    padding-top: 0;
+    h1 {
+      font-size: 2em;
     }
   }
   @include media(30em) {
     padding: 2em;
+    padding-top: 0;
     h2 {
       font-size: 1.8em;
     }
   }
   @include media(45em) {
     padding: 2.5em;
+    padding-top: 0;
     .container {
       height: 100%;
       @include span-columns(6);
@@ -62,9 +72,6 @@ body {
     }
     h2 {
       font-size: 1.6em;
-    }
-    img {
-      max-width: 20em;
     }
   }
   @include media(50em) {

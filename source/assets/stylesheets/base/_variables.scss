@@ -1,9 +1,9 @@
-@include font-face(Circular, '../fonts/circular', $file-formats: ttf otf);
+@include font-face(Fut, '../fonts/futura-Medium', normal, $file-formats: ttf);
 
-$circular: "Circular", $helvetica;
+$futura: "Fut", $helvetica;
 
 // Typography
-$base-font-family: $circular;
+$base-font-family: $futura;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
