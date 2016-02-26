@@ -12,6 +12,7 @@
     .splash
       %h1 John 'Hoppy' Hopkins
       %img{src: "assets/images/splash.jpg"}
+    = Haml::Engine.new(File.read('source/views/_footer.haml')).render
 
     %script{src: "https://code.jquery.com/jquery-2.1.1.min.js", type: "text/javascript"}
     %script{src: "assets/javascripts/application.js", type: "text/javascript"}
