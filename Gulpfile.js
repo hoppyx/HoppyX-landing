@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 
 var paths = {
   haml: './source/views/*.haml',
+  partials: './source/partials/*.haml',
   coffee: './source/assets/javascripts/**/*.coffee',
   scss: './source/assets/stylesheets/**/*.scss',
   images: './source/assets/images/*',
@@ -75,7 +76,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.haml, ['views']);
+  gulp.watch([paths.haml,paths.partials], ['views']);
   gulp.watch(paths.scss, ['stylesheets']);
   gulp.watch(paths.coffee, ['javascripts']);
   gulp.watch(paths.images, ['images']);
@@ -96,6 +97,6 @@ gulp.task('default', ['views', 'stylesheets', 'javascripts', 'images', 'fonts', 
 gulp.task('deploy', function () {
   return gulp.src("./build/**/*")
     .pipe(deploy({
-      branch: "master"
+      branch: "gh-pages"
     }));
 });
