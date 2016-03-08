@@ -10,13 +10,7 @@ body {
 .splash {
   @include row;
   text-align: center;
-  padding: 0.5em;
-  padding-top: 0;
-  position: absolute;
-  top: 10%;
-  right: 0;
-  left: 0;
-
+  padding: 5% .5em .5em;
   .container {
     display: block;
   }
@@ -47,22 +41,19 @@ body {
     line-height: 1.2;
   }
   @include media(em(530)) {
-    padding: 1.5em;
-    padding-top: 0;
+    padding: 5% 1.5em 1.5em;
     h1 {
       font-size: 2em;
     }
   }
   @include media(30em) {
-    padding: 2em;
-    padding-top: 0;
+    padding: 5% 2em 2em;
     h2 {
       font-size: 1.8em;
     }
   }
   @include media(45em) {
-    padding: 2.5em;
-    padding-top: 0;
+    padding: 5% 2.5em 2.5em;
     .container {
       height: 100%;
       @include span-columns(6);

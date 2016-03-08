@@ -3,15 +3,15 @@ footer {
   $action-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $footer-background: desaturate(darken($action-color, 20%), 30%);
-  $footer-color: white;
+  $footer-background: $light-gray;
+  $footer-color: $dark-gray;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
-  display: inline-block;
+  @include row;
 
   .footer-logo {
     margin-right: 1em;
