@@ -97,6 +97,6 @@ gulp.task('default', ['views', 'stylesheets', 'javascripts', 'images', 'fonts', 
 gulp.task('deploy', function () {
   return gulp.src("./build/**/*")
     .pipe(deploy({
-      branch: "gh-pages"
+      remoteUrl: "https://github.com/jerome-toole/Hoppy-Landing--Pages.git"
     }));
 });
