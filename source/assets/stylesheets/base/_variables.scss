@@ -38,3 +38,11 @@ $base-border: 1px solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+$footer-height--wide: 4em;
+$footer-height--narrow: 4em;
+
+// Breakpoints
+
+$medium-screen: em(640);
+$large-screen: em(860);

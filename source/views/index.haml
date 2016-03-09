@@ -12,6 +12,18 @@
     .splash
       %h1 John 'Hoppy' Hopkins
       %img{src: "assets/images/splash.jpg"}
+      .splash__text
+        :markdown
+          New site under construction. Access the old site [here](http://hoppyx.github.io/HoppyX-Archive/).
     = Haml::Engine.new(File.read('source/partials/_footer.haml')).render
+    .modal
+      %input.modal-state#modal-1{type:"checkbox"}
+        .modal-fade-screen
+          .modal-inner
+            .modal-close{for:"modal-1"} 
+            :markdown
+              Hoppy Estate in process of etc...
+
+              Please email <a href="mailto:jonelle.afonso@jwssllp.com" target="_blank">jonelle.afonso@jwssllp.com</a> with any queries.
     %script{src: "https://code.jquery.com/jquery-2.1.1.min.js", type: "text/javascript"}
     %script{src: "assets/javascripts/application.js", type: "text/javascript"}

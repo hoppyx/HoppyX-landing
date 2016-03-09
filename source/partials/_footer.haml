@@ -1,12 +1,17 @@
 %footer
-  .footer-logo
+  .footer-links
     %ul
-      %li 
-        <a href="javascript:void(0)">About</a>
-      %li 
-        <a href="javascript:void(0)">Contact</a>
+      %li
+        %label{for:"modal-1"} About
+        
+        #about.reveal.footer__section
+          :markdown
+            Hoppy died January 30, 2015. His estate is in the process of building a new website to share his work and remember him.
 
-    .footer-secondary-links
-      %ul
-        %li 
-          <a href="javascript:void(0)">Terms and Conditions</a>
+            Please email <jonelle.afonso@jwssllp.com> with any queries.
+  .footer-links-secondary
+    Copyright © <span class="year">
+    <script type="text/javascript">
+    var d = new Date()
+    document.write(d.getFullYear())
+    </script></span> The Estate of John Hopkins

@@ -3,6 +3,11 @@
 @import "bourbon";
 @import "neat";
 @import "base/base";
-@import "components/footer";
 
 @import "global";
+
+@import "components/micro-patterns";
+@import "components/modal";
+@import "components/footer";
+
+@import "views/landing-page";

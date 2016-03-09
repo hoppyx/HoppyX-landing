@@ -1,8 +1,8 @@
+
+
 footer {
   $base-spacing: 1.5em !default;
   $action-color: #477DCA !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
   $footer-background: $light-gray;
   $footer-color: $dark-gray;
   $footer-link-color: transparentize($footer-color, 0.6);
@@ -11,11 +11,15 @@ footer {
   background: $footer-background;
   padding: $base-spacing;
   width: 100%;
+  height: $footer-height--narrow;
+
+  @include media($large-screen) {
+    height: $footer-height--wide;
+  }
   @include row;
 
-  .footer-logo {
+  .footer-links {
     margin-right: 1em;
-    margin-bottom: 1em;
 
     @include media($large-screen) {
       float: left;
@@ -23,13 +27,13 @@ footer {
     }
   }
 
-  .footer-logo img {
+  .footer-links img {
     height: 1.6em;
   } 
 
   ul {
     line-height: 1.5em;
-    margin: 0 0 1em 0;
+    margin: 0;
     padding: 0;
     
     @include media($large-screen) {
@@ -50,9 +54,11 @@ footer {
     }
   }
 
-  ul li a {
+  ul li a,
+  ul li label {
     color: $footer-link-color;
     text-decoration: none;
+    display: inline-block;
 
     &:focus,
     &:hover {
@@ -100,5 +106,8 @@ footer {
         }
       }
     }
+  }
+  .footer__section {
+    background: $footer-background;
   }
 }
